@@ -1,0 +1,22 @@
+Resources:
+    TransformDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S" 
+          - AttributeName: "category"
+            AttributeType: "S"   
+        KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+          - AttributeName: "category"
+            KeyType: "RANGE"
+        BillingMode: "PAY_PER_REQUEST"
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+        TableName: ${self:custom.jobTable}
+        TimeToLiveSpecification:
+          AttributeName: expirationTime
+          Enabled: true

@@ -1,0 +1,18 @@
+- process:
+    name: ${self:service}-${opt:stage, self:provider.stage}
+    description: Jobs Api to handle job post n get requests
+    handler: src/handlers/${self:provider.name}/jobs-api-handler.handle
+    timeout: 900
+    package:
+      include:
+        - src/handlers/${self:provider.name}/jobs-api-handler.js
+        - node_modules/job-post/**
+    events:
+      - http:
+          path: jobs
+          method: get
+          async: false
+      - http:
+          path: jobs
+          method: post
+          async: false
