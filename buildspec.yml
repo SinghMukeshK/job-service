@@ -9,4 +9,5 @@ phases:
     commands:
       - cd serverless
       - ls
+      - npm install
       - serverless deploy --stage=dev
