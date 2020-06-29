@@ -5,11 +5,11 @@ phases:
         nodejs: 10
   build:
     commands:
-      - npm install serverless
+      # - npm install serverless
       - cd serverless
       - npm install
       - ls
-      - serverless deploy --stage=dev
+      # - serverless deploy --stage=dev
       - export BUCKET=lambda-deployment-artifacts-job-service
       - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
 artifacts:
