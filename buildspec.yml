@@ -13,4 +13,4 @@ phases:
     commands:
       - ls
       - serverless print
-      - serverless deploy --stage dev
+      - serverless deploy --stage dev 
