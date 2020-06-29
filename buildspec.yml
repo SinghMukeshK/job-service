@@ -7,8 +7,10 @@ phases:
       - cd serverless
       - npm install
       - npm install serverless -g
+      - serverless -v
       - ls
   build:
     commands:
       - ls
+      - serverless print
       - serverless deploy --stage dev
