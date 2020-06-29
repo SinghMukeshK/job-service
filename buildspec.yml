@@ -12,5 +12,4 @@ phases:
   build:
     commands:
       - ls
-      - serverless print
       - serverless deploy --stage dev 
