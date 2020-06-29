@@ -4,10 +4,9 @@ phases:
     runtime-versions:
         nodejs: 10
     commands:
+      - cd serverless
       - npm install
       - npm install  serverless
-      - ls
-      - cd serverless
       - ls
       - serverless deploy --stage=dev
   # build:
