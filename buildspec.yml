@@ -5,9 +5,9 @@ phases:
         nodejs: 10
     commands:
       - npm install -g serverless
-  build:
-    commands:
       - cd serverless
       - ls
       - npm install
       - serverless deploy --stage=dev
+  # build:
+  #   commands:
