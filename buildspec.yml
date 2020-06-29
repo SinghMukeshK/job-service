@@ -6,7 +6,7 @@ phases:
     commands:
       - cd serverless
       - npm install
-      - npm install  serverless
+      - npm install serverless -g
       - ls
   build:
     commands:
