@@ -6,6 +6,7 @@ let JobService = require('../service/JobService');
 class JobApiProcessor {
 
     async process(event) {
+        console.log(event)
         if (event && event.body) {
             let keyValues = [];
             let request = Utils.parseElement(event.body);

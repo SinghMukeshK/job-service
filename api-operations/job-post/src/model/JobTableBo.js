@@ -1,4 +1,4 @@
-const uuidv4 = require('uuid');
+let { v4 } = require('uuid');
 
 class JobTable {
     constructor(keyvalues) {
@@ -12,7 +12,7 @@ class JobTable {
                 record[element.name] = element.value;
             });
         }
-        record.id = uuidv4();
+        record.id = v4();
         console.log(record);
         console.log(JSON.stringify(records));
         return record;
