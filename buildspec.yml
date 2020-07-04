@@ -11,4 +11,4 @@ phases:
       - ls
   build:
     commands: 
-      - serverless deploy --stage dev     
+      - serverless deploy --stage dev       
